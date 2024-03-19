@@ -5,18 +5,18 @@ import Link from "next/link";
 import { IoSearchOutline, IoCartOutline } from "react-icons/io5";
 
 import { titleFont } from "@/config/fonts";
-import { useCartStore, useUIStore } from "@/store";
+// import { useCartStore, useUIStore } from "@/store";
 
 export const TopMenu = () => {
 
-  const openSideMenu = useUIStore((state) => state.openSideMenu);
-  const totalItemsInCart = useCartStore((state) => state.getTotalItems());
+  // const openSideMenu = useUIStore((state) => state.openSideMenu);
+  // const totalItemsInCart = useCartStore((state) => state.getTotalItems());
   
-  const [loaded, setLoaded] = useState(false);
+  // const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    setLoaded(true);
-  }, [])
+  // useEffect(() => {
+  //   setLoaded(true);
+  // }, [])
   
 
 
@@ -36,19 +36,19 @@ export const TopMenu = () => {
       <div className="hidden sm:block">
         <Link
           className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
-          href="/gender/men"
+          href="/category/men"
         >
           Hombres
         </Link>
         <Link
           className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
-          href="/gender/women"
+          href="/category/women"
         >
           Mujeres
         </Link>
         <Link
           className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
-          href="/gender/kid"
+          href="/category/kid"
         >
           Niños
         </Link>
@@ -60,23 +60,23 @@ export const TopMenu = () => {
           <IoSearchOutline className="w-5 h-5" />
         </Link>
 
-        <Link href={
-          ( (totalItemsInCart === 0 ) && loaded )
-            ? '/empty'
-            : "/cart"
+        <Link href={"/cart"
+          // ( (totalItemsInCart === 0 ) && loaded )
+          //   ? '/empty'
+          //   : 
         } className="mx-2">
           <div className="relative">
-            {  ( loaded && totalItemsInCart > 0) && (
+            {/* {  ( loaded && totalItemsInCart > 0) && ( */}
               <span className="fade-in absolute text-xs px-1 rounded-full font-bold -top-2 -right-2 bg-blue-700 text-white">
-                {totalItemsInCart}
+                3
               </span>
-            )}
+            {/* )} */}
             <IoCartOutline className="w-5 h-5" />
           </div>
         </Link>
 
         <button
-          onClick={openSideMenu}
+          // onClick={openSideMenu}
           className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
         >
           Menú
