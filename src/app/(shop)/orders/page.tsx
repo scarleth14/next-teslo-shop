@@ -1,9 +1,10 @@
-import { Category } from '../../../interfaces/category.interface';
+import React from 'react'
 
-export default function () {
+export default function() {
   return (
     <div>
-      <h1>Orders Page</h1>
+      <h1>Listado de órdenes</h1>
     </div>
-  );
+  )
 }
+
