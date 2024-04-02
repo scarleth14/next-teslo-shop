@@ -75,7 +75,6 @@ export default function ({ params }: Props) {
 
       </div>
 
-      <h1>Product Page</h1>
     </div>
   );
 }
