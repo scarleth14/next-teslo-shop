@@ -10,7 +10,7 @@ const productsInCart = [
   initialData.products[2],
 ];
 
-export default function MyComponent() {
+export default function CheckoutPage() {
   return (
     <div className='flex justify-center items-center mb-72 px-10 sm:px-0'>
       {/* Contenido aquí */}
